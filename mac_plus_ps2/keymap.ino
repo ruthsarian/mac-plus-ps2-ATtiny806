@@ -1,4 +1,15 @@
 
+// initScancodes() takes the scanCodesTable[] and extScanCodesTable[] arrays and populates them
+// with Mac Plus keyboard scancodes. the array index is a 1 byte represents of a corresponding
+// PS2 scancode
+//
+// the ATtiny806 does not have the memory space to contain these arrays. therefore instead of populating
+// these values on-the-fly, they must be pre-calculated and stored as a const typed variable. this
+// will cause the compiler to store the data for these variables in program space rather than memory.
+//
+// therefore we do not need this function. so it is commented out.
+
+/*
 void initScancodes() {
   for (int i = 0; i < 256; i++) {
     scanCodesTable[i] = NULL_TRANSITION;
@@ -102,3 +113,4 @@ void initScancodes() {
   scanCodesTable[0x75] = 0x37 | NUMPAD; // numpad 8
   scanCodesTable[0x7d] = 0x39 | NUMPAD; // numpad 9
 }
+*/

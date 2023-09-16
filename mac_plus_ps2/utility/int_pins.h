@@ -12,6 +12,10 @@
   #define CORE_INT4_PIN  19
   #define CORE_INT5_PIN  18
 
+// ATtiny806 via megaTinyCore
+#elif defined(ARDUINO_AVR_ATtiny806)
+  #define CORE_INT_EVERY_PIN
+
 // Arduino Due (untested)
 #elif defined(__SAM3X8E__) 
   #define CORE_INT_EVERY_PIN
